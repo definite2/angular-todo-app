@@ -1,6 +1,6 @@
 # DragDropTodo
 
-Draggable task list app.
+Draggable Kanban task app
 
 Stack
 -----
