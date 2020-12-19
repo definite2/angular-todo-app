@@ -26,7 +26,7 @@
       <mat-card cdkDropList id="inProgress" #inProgressList="cdkDropList" [cdkDropListData]="inProgress | async"
         [cdkDropListConnectedTo]="[todoList, doneList]" (cdkDropListDropped)="drop($event)" class="list">
         <p class="empty-label" *ngIf="(inProgress | async)?.length === 0">Empty list</p>
-        <app-task (edit)="edit('inProgress', $event)" (status)="toggleStatus('todo',$event)"
+        <app-task (edit)="edit('inProgress', $event)" (status)="toggleStatus('inProgress',$event)"
         *ngFor="let task of inProgress | async" cdkDrag [task]="task" class="task">
         </app-task>
       </mat-card>
@@ -38,10 +38,10 @@
       <mat-card cdkDropList id="done" #doneList="cdkDropList" [cdkDropListData]="done | async"
         [cdkDropListConnectedTo]="[todoList, inProgressList]" (cdkDropListDropped)="drop($event)" class="list">
         <p class="empty-label" *ngIf="(done | async)?.length === 0">Empty list</p>
-        <app-task (edit)="edit('done', $event)" (status)="toggleStatus('todo',$event)"
+        <app-task (edit)="edit('done', $event)" (status)="toggleStatus('done',$event)"
         *ngFor="let task of done | async" cdkDrag [task]="task" class="task"></app-task>
       </mat-card>
     </div>
+   
   </div>
 </div>
-<app-messages></app-messages>
