@@ -1,6 +1,13 @@
 # DragDropTodo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+Draggable task list app.
+
+Stack
+-----
+- Angular CLI 11.0.4.
+- Firebase
+- RxJS
+- Material UI
 
 Quick Start
 -----------
