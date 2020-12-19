@@ -1,0 +1,36 @@
+:host {
+    display: block;
+  }
+  
+  .item {
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .task {
+    display: flex;
+    margin-bottom: 10px;
+}
+  
+.task-done {
+    margin: 8px 20px 0 0;
+   
+    }
+  
+    .task-label {
+      position: relative;
+      top: 2px;
+      cursor: pointer;
+    }
+  
+      .task-label-done {
+        text-decoration: line-through;
+        opacity: 0.5;
+      }
+    
+  
+.edit:hover{
+    cursor:default;
+}
+mat-card-actions{
+  align-content: flex-end;
+}

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-todo-app-496e3": {
+      "hosting": {
+        "kanban-fire": [
+          "angular-todo-app-496e3"
+        ]
+      }
+    }
+  }
+}
