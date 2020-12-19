@@ -2,6 +2,67 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
 
+Quick Start
+-----------
+
+#### Install Angular CLI
+
+```shell
+$ npm install -g @angular/cli
+```
+
+#### Clone the app, install package dependencies, and start the dev server @ `localhost:4200`
+
+```shell
+$ git clone https://github.com/definite2/angular-todo-app.git
+$ npm install
+$ npm start
+```
+## Deploying to Firebase
+#### Prerequisites
+- Create a free Firebase account at https://firebase.google.com
+- Create a project from your [Firebase account console](https://console.firebase.google.com)
+- Configure the authentication providers for your Firebase project from your Firebase account console
+
+#### Configure this app with your project-specific details
+
+Edit `.firebaserc` in the project root:
+
+```json
+{
+  "projects": {
+    "default": "your-project-id"
+  }
+}
+```
+
+Edit the firebase configuration in `src/environment.ts`
+
+```json
+...
+firebaseConfig : {
+  apiKey: 'your api key',
+  authDomain: 'your-project-id.firebaseapp.com',
+  databaseURL: 'https://your-project-id.firebaseio.com',
+  storageBucket: 'your-project-id.appspot.com'
+}
+```
+
+#### Install firebase-tools
+```shell
+$ npm install -g firebase-tools
+```
+
+#### Build and deploy the app
+```shell
+$ npm run build
+$ firebase login
+$ firebase use default
+$ firebase deploy
+```
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
