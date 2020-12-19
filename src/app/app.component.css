@@ -26,6 +26,7 @@ mat-toolbar {
   .container {
     
     max-width: 400px;
+    width: 350px;
     margin: 0 25px 25px 0;
     display: inline-block;
   }
@@ -37,10 +38,12 @@ float: left;
   }
   #inProgressContainer{
 float: left;
+
   }
   #compeletedContainer{
     float: right;
 position: absolute;
+width: 350px;
   }
 
   
@@ -49,11 +52,7 @@ position: absolute;
     min-height: 60px;
     border-radius: 4px;
   }
-  .task {
-    background-color: #eee;
-    cursor: pointer;
-    color: #607d8b;
-  }
+
   app-new-task {
     margin-bottom: 30px;
   }
