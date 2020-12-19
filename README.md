@@ -38,7 +38,7 @@ Edit `.firebaserc` in the project root:
 
 Edit the firebase configuration in `src/environment.ts`
 
-```json
+```typescript
 ...
 firebaseConfig : {
   apiKey: 'your api key',
