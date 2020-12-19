@@ -18,6 +18,7 @@ import { environment } from '../environments/environment';
 import {MatDividerModule} from '@angular/material/divider';
 import { MessagesComponent } from './messages/messages.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     MatDividerModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

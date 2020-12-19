@@ -6,7 +6,7 @@ import { TaskDialogComponent } from './task-dialog/task-dialog.component'
 import { CdkDragDrop, transferArrayItem } from '@angular/cdk/drag-drop';
 import { MessagesService } from './services/messages.service';
 import { BehaviorSubject } from 'rxjs';
-
+import { MatSnackBar } from '@angular/material/snack-bar'
 const getObservable = (collection: AngularFirestoreCollection<Task>) => {
   const subject = new BehaviorSubject([]);
   //subscribe to the changes on the collection:
@@ -24,8 +24,9 @@ const getObservable = (collection: AngularFirestoreCollection<Task>) => {
 })
 export class AppComponent {
   // initialize as injecting angularfire instance and matdialog
-  constructor(private store: AngularFirestore, private dialog: MatDialog, private msgService: MessagesService) { }
-
+  constructor(private store: AngularFirestore, private dialog: MatDialog, public msgService: MessagesService,
+    private snack: MatSnackBar) { }
+  messages: string[] = [];
   //firestore db collections:
   todo = getObservable(this.store.collection('todo'));
   done = getObservable(this.store.collection('done'));
@@ -42,10 +43,12 @@ export class AppComponent {
         task: {}
       }
     });
-    dialog.afterClosed().subscribe((result: TaskDialogResultData) =>
-      this.store.collection('todo').add(result.task));
-    this.msgService.add(`new item added`)
-  };
+    dialog.afterClosed().subscribe((result: TaskDialogResultData) => {
+      this.store.collection('todo').add(result.task);
+     // this.msgService.add(`${result.task.title} item is added`)
+    });
+  }
+
   //event emmited when task is dropped in another container:
   drop(event: CdkDragDrop<Task[]>) {
     if (event.previousContainer === event.container)
@@ -76,24 +79,37 @@ export class AppComponent {
       }
     });
     dialog.afterClosed().subscribe((result: TaskDialogResultData) => {
-      if (result.delete)
+      if (result.delete) {
         this.store.collection(list).doc(task.id).delete();
-      else
+        //this.msgService.add(`${result.task.title} is deleted`)
+      }
+
+      else {
         this.store.collection(list).doc(task.id).update(task)
+        this.msgService.add(`${result.task.title} is updated`);
+      }
+
     })
   };
 
   //if it is checked moved to the completed container:
   toggleStatus(list: 'todo' | 'inProgress' | 'done', task: Task): void {
-    if(task.done){
+    if (task.done) {
       this.store.collection(list).doc(task.id).delete();
-      this.store.collection('done').doc(task.id).get().subscribe((docSnapshot)=>{
+      this.store.collection('done').doc(task.id).get().subscribe((docSnapshot) => {
         if (!docSnapshot.exists) {
           this.store.collection('done').add(task)
-        } 
-      })
+          this.msgService.add(`${task.title} task is done`);
+          this.snack.open(`${task.title} task is done`, '',
+          { duration: 2000})
+          // .onAction()
+          // .pipe(take(1))
+          // .subscribe(() => this.toggleStatus({ }));
+        }
+      });
+
+    }
+
   }
- 
-}
-title = 'drag-drop-todo';
+  title = 'drag-drop-todo';
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import{MessagesService} from '../services/messages.service'
+import{MessagesService} from '../services/messages.service';
+import{MatSnackBar} from '@angular/material/snack-bar';
 @Component({
   selector: 'app-messages',
   templateUrl: './messages.component.html',
@@ -8,9 +9,10 @@ import{MessagesService} from '../services/messages.service'
 export class MessagesComponent implements OnInit {
 
   messages:string[]=[];
-  constructor(public msgService:MessagesService) { }
+  constructor(public msgService:MessagesService,public snack:MatSnackBar) { }
 
   ngOnInit(): void {
   }
+  
 
 }
