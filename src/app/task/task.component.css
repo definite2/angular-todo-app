@@ -32,3 +32,12 @@
 .edit:hover{
     cursor:default;
 }
+mat-card:hover{
+  color:#607D8B;
+  background-color: #DDD;
+  left: .1em; 
+}
+mat-card .selected{
+  background-color: #cce3e6;
+  color: white;
+}
