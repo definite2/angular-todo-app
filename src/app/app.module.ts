@@ -18,7 +18,8 @@ import { environment } from '../environments/environment';
 import {MatDividerModule} from '@angular/material/divider';
 import { MessagesComponent } from './messages/messages.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatGridListModule} from '@angular/material/grid-list';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
     AngularFirestoreModule,
     MatDividerModule,
     MatCheckboxModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

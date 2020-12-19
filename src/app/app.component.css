@@ -21,12 +21,28 @@ mat-toolbar {
   .container-wrapper {
     display: flex;
     justify-content: space-around;
+    position: relative;
   }
-  
   .container {
-    width: 400px;
+    
+    max-width: 400px;
     margin: 0 25px 25px 0;
+    display: inline-block;
   }
+  .container-wrapper > div {
+    flex: 1; /*grow*/
+  }
+  #todoContainer{
+float: left;
+  }
+  #inProgressContainer{
+float: left;
+  }
+  #compeletedContainer{
+    float: right;
+position: absolute;
+  }
+
   
   .list {
     border: solid 1px #ccc;
