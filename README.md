@@ -22,6 +22,7 @@ $ npm install -g @angular/cli
 
 ```shell
 $ git clone https://github.com/definite2/angular-todo-app.git
+$ cd angular-todo-app
 $ npm install
 $ npm start
 ```
