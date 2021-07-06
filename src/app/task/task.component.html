@@ -1,20 +1,15 @@
 <mat-card class="task">
-
-    <mat-card-header>
-        <mat-checkbox class="task-done" [(ngModel)]="task.done" (change)="status.emit(task)"></mat-checkbox>
-        <h2 class="task-label" [ngClass]="{ 'task-label-done': task.done }">
-            {{task.title}}
-        </h2>
-    </mat-card-header>
-<mat-divider></mat-divider>
-    <mat-card-content>
-        <p class="task-label" [ngClass]="{ 'task-label-done': task.done }">{{task.description}}</p>
-    </mat-card-content>
-
-    <mat-card-actions>
-        <button mat-raised-button (click)="edit.emit(task)">
-            <mat-icon>edit</mat-icon>
-        </button>
-    </mat-card-actions>
-
+  <mat-card-header>
+    <mat-checkbox
+      class="task-done"
+      [(ngModel)]="task.done"
+      (change)="status.emit(task)"
+    ></mat-checkbox>
+    <p class="task-label" [ngClass]="{ 'task-label-done': task.done }">
+      {{ task.title }}
+    </p>
+    <button mat-icon-button class="btn-edit" (click)="edit.emit(task)">
+        <mat-icon>edit</mat-icon>
+      </button>
+  </mat-card-header>
 </mat-card>

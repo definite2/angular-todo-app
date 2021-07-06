@@ -1,43 +1,47 @@
 :host {
-    display: block;
-  }
-  
-  .item {
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
-  .task {
-    
-    margin-bottom: 10px;
-    background-color: rgb(253, 253, 244);
+  display: block;
 }
-  
+
+.item {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.task {
+  margin-bottom: 10px;
+  background-color: rgb(248, 248, 246);
+  max-height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .task-done {
-    margin: 8px 20px 0 0;
-   
-    }
-  
-    .task-label {
-      position: relative;
-      top: 2px;
-      cursor: pointer;
-    }
-  
-      .task-label-done {
-        text-decoration: line-through;
-        opacity: 0.5;
-      }
-    
-  
-.edit:hover{
-    cursor:default;
+  margin: 8px 20px 0 0;
+  transform: scale(1.5);
 }
-mat-card:hover{
-  color:#607D8B;
-  background-color: #DDD;
-  left: .1em; 
+
+.task-label {
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 6px;
 }
-mat-card .selected{
+
+.task-label-done {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.edit:hover {
+  cursor: default;
+}
+mat-card:hover {
+  color: #8aa2ad;
+  background-color: #cce3e6;
+  left: 0.1em;
+}
+mat-card .selected {
   background-color: #cce3e6;
   color: white;
+}
+.btn-edit{
+  align-self: flex-end;
 }
