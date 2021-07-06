@@ -3,7 +3,7 @@
   <span>Drag N Drop Todo App</span>
 </mat-toolbar>
 <div class="content-wrapper">
-  <button mat-raised-button (click)="addnewTask()">
+  <button mat-raised-button (click)="addnewTask()" color="primary" class="btn-add">
     <mat-icon>add</mat-icon>Add New task
   </button>
   
@@ -34,7 +34,6 @@
    
     <div class="container" id="compeletedContainer">
       <h2>Completed</h2>
-    
       <mat-card cdkDropList id="done" #doneList="cdkDropList" [cdkDropListData]="done | async"
         [cdkDropListConnectedTo]="[todoList, inProgressList]" (cdkDropListDropped)="drop($event)" class="list">
         <p class="empty-label" *ngIf="(done | async)?.length === 0">Empty list</p>
@@ -42,6 +41,7 @@
         *ngFor="let task of done | async" cdkDrag [task]="task" class="task"></app-task>
       </mat-card>
     </div>
-   
+   <!-- end::container wrapper -->
   </div>
+  <!-- end::content wrapper -->
 </div>

@@ -1,74 +1,71 @@
 mat-toolbar {
-    margin-bottom: 20px;
-  }
-  
-  mat-toolbar > span {
-    margin-left: 10px;
-  }
-  [class*='col-'] {
-    float: left;
-    padding-right: 20px;
-    padding-bottom: 20px;
-  }
-  [class*='col-']:last-of-type {
-    padding-right: 0;
-  }
-  .content-wrapper {
-    max-width: 1400px;
-    margin: auto;
-  }
-  
-  .container-wrapper {
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-    
-  }
-  .container {
-    
-    max-width: 400px;
-    width: 350px;
-    margin: 0 25px 25px 0;
-    display: inline-block;
-  }
-  .container-wrapper > div {
-    flex: 1; /*grow*/
-  }
-  #todoContainer{
-float: left;
-  }
-  #inProgressContainer{
-float: left;
+  margin-bottom: 20px;
+}
 
-  }
-  #compeletedContainer{
-    float: right;
-position: absolute;
-width: 350px;
-  }
+mat-toolbar > span {
+  margin-left: 10px;
+}
+[class*="col-"] {
+  float: left;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+[class*="col-"]:last-of-type {
+  padding-right: 0;
+}
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto 50px;
+}
 
-  
-  .list {
-    border: solid 1px #ccc;
-    min-height: 60px;
-    border-radius: 4px;
-  }
+.container-wrapper {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+.container {
+  max-width: 400px;
+  width: 350px;
+  margin: 10px 25px 25px 0;
+  display: inline-block;
+}
+.container-wrapper > div {
+  flex: 1; /*grow*/
+}
+#todoContainer {
+  float: left;
+}
+#inProgressContainer {
+  float: left;
+}
+#compeletedContainer {
+  float: right;
+  position: absolute;
+  width: 350px;
+}
 
-  app-new-task {
-    margin-bottom: 30px;
-  }
-  
-  .empty-label {
-    font-size: 2em;
-    padding-top: 10px;
-    text-align: center;
-    opacity: 0.2;
-  }
-  
-  .cdk-drag-animating {
-    transition: transform 250ms;
-  }
-  
-  .cdk-drag-placeholder {
-    opacity: 0;
-  }
+.list {
+  border: solid 1px #ccc;
+  min-height: 60px;
+  border-radius: 4px;
+}
+
+.empty-label {
+  font-size: 2em;
+  padding-top: 10px;
+  text-align: center;
+  opacity: 0.2;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms;
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+.btn-add{
+  width:200px;
+  height:52px;
+}
