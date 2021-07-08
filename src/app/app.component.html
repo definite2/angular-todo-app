@@ -1,35 +1,94 @@
-<mat-toolbar >
+<mat-toolbar style="padding-right: 60px;">
   <mat-icon>done_outline</mat-icon>
   <span>Drag N Drop Todo App</span>
+  <span class="spacer"></span>
+  <div *ngIf="auth.authenticated$ | async " class="right-logout">
+  
+   <button  mat-icon-button aria-label="logout-icon" (click)="auth.signOut()">
+    LOGOUT<mat-icon>logout</mat-icon>
+  </button>
+</div>
 </mat-toolbar>
-<div class="content-wrapper">
-<button mat-raised-button (click)="addnewTask()" class="btn-add">
-  <mat-icon>add</mat-icon>Add New task
-</button>
-
+<div
+  *ngIf="auth.authenticated$ | async; else elseBlock"
+  class="content-wrapper"
+>
+  <button mat-raised-button (click)="addnewTask()" class="btn-add">
+    <mat-icon>add</mat-icon>Add New task
+  </button>
   <div class="container-wrapper">
-    <div fxLayout.xs="column" fxLayout="row wrap"  fxLayoutAlign="center" fxLayoutGap="64px" ngClass.gt-xs="ml-10" >
-    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" id="todoContainer">
-      <h2 class="title">Todo</h2>
-      
-      <mat-card class="mat-elevation-z4" cdkDropList id="todo" #todoList="cdkDropList" [cdkDropListData]="todo | async"
-        [cdkDropListConnectedTo]="[doneList]" (cdkDropListDropped)="drop($event)" class="list">
-        <p class="empty-label" *ngIf="(todo | async)?.length === 0">Empty list</p>
-        <app-task (edit)="edit('todo', $event)" (status)="toggleStatus('todo',$event)"
-         *ngFor="let task of todo | async" cdkDrag [task]="task" class="task"></app-task>
-      </mat-card>
+    <div
+      fxLayout.xs="column"
+      fxLayout="row wrap"
+      fxLayoutAlign="center"
+      fxLayoutGap="64px"
+      ngClass.gt-xs="ml-10"
+    >
+      <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" id="todoContainer">
+        <h2 class="title">Todo</h2>
+
+        <mat-card
+          class="mat-elevation-z4"
+          cdkDropList
+          id="todo"
+          #todoList="cdkDropList"
+          [cdkDropListData]="todo | async"
+          [cdkDropListConnectedTo]="[doneList]"
+          (cdkDropListDropped)="drop($event)"
+          class="list"
+        >
+          <p class="empty-label" *ngIf="(todo | async)?.length === 0">
+            Empty list
+          </p>
+          <app-task
+            (edit)="edit('todo', $event)"
+            (status)="toggleStatus('todo', $event)"
+            *ngFor="let task of todo | async"
+            cdkDrag
+            [task]="task"
+            class="task"
+          ></app-task>
+        </mat-card>
+      </div>
+
+      <div
+        fxFlex="25%"
+        fxFlex.xs="100%"
+        fxFlex.sm="33%"
+        id="compeletedContainer"
+      >
+        <h2 class="title">Completed</h2>
+        <mat-card
+          class="mat-elevation-z4"
+          cdkDropList
+          id="done"
+          #doneList="cdkDropList"
+          [cdkDropListData]="done | async"
+          [cdkDropListConnectedTo]="[todoList]"
+          (cdkDropListDropped)="drop($event)"
+          class="list"
+        >
+          <p class="empty-label" *ngIf="(done | async)?.length === 0">
+            Empty list
+          </p>
+          <app-task
+            (edit)="edit('done', $event)"
+            (status)="toggleStatus('done', $event)"
+            *ngFor="let task of done | async"
+            cdkDrag
+            [task]="task"
+            class="task"
+          ></app-task>
+        </mat-card>
+      </div>
+      <!-- end::flexbox -->
     </div>
-    
-    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" id="compeletedContainer">
-      <h2 class="title">Completed</h2>
-      <mat-card class="mat-elevation-z4" cdkDropList id="done" #doneList="cdkDropList" [cdkDropListData]="done | async"
-        [cdkDropListConnectedTo]="[todoList]" (cdkDropListDropped)="drop($event)" class="list">
-        <p class="empty-label" *ngIf="(done | async)?.length === 0">Empty list</p>
-        <app-task (edit)="edit('done', $event)" (status)="toggleStatus('done',$event)"
-        *ngFor="let task of done | async" cdkDrag [task]="task" class="task"></app-task>
-      </mat-card>
-    </div>
-   <!-- end::container wrapper -->
   </div>
+  <!-- end::container wrapper -->
 </div>
-</div>
+<ng-template #elseBlock>
+  <app-login></app-login>
+</ng-template>   
+
+<!-- end::content-wrapper -->
+<router-outlet></router-outlet>

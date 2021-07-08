@@ -74,3 +74,6 @@ mat-toolbar > span {
 .msg-success {
   background-color: green;
 }
+.spacer{
+  flex: 1 1 auto;
+}
