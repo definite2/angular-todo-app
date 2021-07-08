@@ -16,19 +16,20 @@ import { AngularFirestoreModule } from '@angular/fire/firestore'
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import {MatDividerModule} from '@angular/material/divider';
-import { MessagesComponent } from './messages/messages.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SnackbarComponent } from './snackbar/snackbar.component';
+import { AppRoutingModule } from './app-routing.module';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
     TaskComponent,
     TaskDialogComponent,
-    MessagesComponent,
-    SnackbarComponent
+    SnackbarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +48,8 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
     MatCheckboxModule,
     MatSnackBarModule,
     MatGridListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
