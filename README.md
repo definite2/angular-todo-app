@@ -65,8 +65,7 @@ $ npm install -g firebase-tools
 ```shell
 $ npm run build
 $ firebase login
-$ firebase use default
-$ firebase deploy
+$ firebase deploy --project zyour-projectID>
 ```
 
 
