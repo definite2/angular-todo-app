@@ -1,4 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+:root {
+  --bg-dark: rgb(48 50 61);
+  --bg-light: hsl(0, 0%, 95%);
+  --text-dark: rgb(91 146 255);
+  --bg-btn: rgb(91 146 255);
+  --white: hsl(0, 0%, 95%);
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--bg-dark);
+}
+.mat-dialog-container {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+.mat-raised-button {
+  background-color: var(--bg-btn);
+  color: var(--white);
+}
+.mat-form-field-underline{
+background-color: var(--text-dark);
+}
+.mat-form-field-label{
+  color:var(--text-dark)
+}

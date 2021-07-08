@@ -1,14 +1,12 @@
-:host {
-  display: block;
-}
 
 .item {
   margin-bottom: 10px;
   cursor: pointer;
 }
 .task {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
   margin-bottom: 10px;
-  background-color: rgb(248, 248, 246);
   max-height: 80px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -34,12 +32,12 @@
   cursor: default;
 }
 mat-card:hover {
-  color: #8aa2ad;
-  background-color: #cce3e6;
+  color: white;
+  background-color: rgb(91 146 255);;
   left: 0.1em;
 }
 mat-card .selected {
-  background-color: #cce3e6;
+  background-color: rgb(91 146 255);;
   color: white;
 }
 .btn-edit{

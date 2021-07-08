@@ -20,6 +20,7 @@ import { MessagesComponent } from './messages/messages.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatDividerModule,
     MatCheckboxModule,
     MatSnackBarModule,
-    MatGridListModule
+    MatGridListModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

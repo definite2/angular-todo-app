@@ -1,52 +1,23 @@
 mat-toolbar {
   margin-bottom: 20px;
+  background-color: var(--bg-btn);
+}
+#todo,
+#done {
+  border-color: var(--text-dark);
+  color: var(--text-dark);
+  width: 375px;
 }
 
 mat-toolbar > span {
   margin-left: 10px;
 }
-[class*="col-"] {
-  float: left;
-  padding-right: 20px;
-  padding-bottom: 20px;
-}
-[class*="col-"]:last-of-type {
-  padding-right: 0;
-}
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  margin: auto 50px;
-}
-
-.container-wrapper {
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-}
-.container {
-  max-width: 400px;
-  width: 350px;
-  margin: 10px 25px 25px 0;
-  display: inline-block;
-}
-.container-wrapper > div {
-  flex: 1; /*grow*/
-}
-#todoContainer {
-  float: left;
-}
-#inProgressContainer {
-  float: left;
-}
-#compeletedContainer {
-  float: right;
-  position: absolute;
-  width: 350px;
 }
 
 .list {
-  border: solid 1px #ccc;
   min-height: 60px;
   border-radius: 4px;
 }
@@ -65,7 +36,7 @@ mat-toolbar > span {
 .cdk-drag-placeholder {
   opacity: 0;
 }
-.btn-add{
-  width:200px;
-  height:52px;
+.btn-add {
+  width: 200px;
+  height: 52px;
 }

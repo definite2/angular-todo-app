@@ -30,7 +30,7 @@ export class AppComponent {
   //firestore db collections:
   todo = getObservable(this.store.collection('todo'));
   done = getObservable(this.store.collection('done'));
-  inProgress = getObservable(this.store.collection('inProgress'));
+
 
   //open dialog to add new task:
 
@@ -69,9 +69,10 @@ export class AppComponent {
   };
 
   //edit task in its collection, enable delete
-  edit(list: 'todo' | 'inProgress' | 'done', task: Task) {
+  edit(list: 'todo' | 'done', task: Task) {
     const dialog = this.dialog.open(TaskDialogComponent, {
-      width: '350px',
+      width: '450px',
+      panelClass:'dark-dialog',
       disableClose: true,
       data: {
         task,
@@ -93,7 +94,7 @@ export class AppComponent {
   };
 
   //if it is checked moved to the completed container:
-  toggleStatus(list: 'todo' | 'inProgress' | 'done', task: Task): void {
+  toggleStatus(list: 'todo' | 'done', task: Task): void {
     if (task.done) {
       this.store.collection(list).doc(task.id).delete();
       this.store.collection('done').doc(task.id).get().subscribe((docSnapshot) => {
