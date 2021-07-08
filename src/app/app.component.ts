@@ -71,7 +71,7 @@ export class AppComponent {
   //edit task in its collection, enable delete
   edit(list: 'todo' | 'done', task: Task) {
     const dialog = this.dialog.open(TaskDialogComponent, {
-      width: '450px',
+      width: '370px',
       panelClass:'dark-dialog',
       disableClose: true,
       data: {
