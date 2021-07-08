@@ -2,6 +2,17 @@
 
 Draggable Kanban task app
 
+### Screenshots
+
+<figure>
+<figcaption>Mobile</figcaption>
+<img src="./src/assets/screenshots/mobile.png" alt="mobile ss" height="500"/>
+</figure>
+
+<figure>
+<figcaption>Desktop</figcaption>
+<img src="./src/assets/screenshots/desktop.png" alt="desktop ss" />
+</figure>
 Stack
 -----
 - Angular CLI 11.0.4.
@@ -9,8 +20,7 @@ Stack
 - RxJS
 - Material UI
 
-Quick Start
------------
+## Quick Start
 
 #### Install Angular CLI
 
@@ -26,8 +36,11 @@ $ cd angular-todo-app
 $ npm install
 $ npm start
 ```
+
 ## Deploying to Firebase
+
 #### Prerequisites
+
 - Create a free Firebase account at https://firebase.google.com
 - Create a project from your [Firebase account console](https://console.firebase.google.com)
 - Configure the authentication providers for your Firebase project from your Firebase account console
@@ -57,18 +70,18 @@ firebaseConfig : {
 ```
 
 #### Install firebase-tools
+
 ```shell
 $ npm install -g firebase-tools
 ```
 
 #### Build and deploy the app
+
 ```shell
 $ npm run build
 $ firebase login
 $ firebase deploy --project zyour-projectID>
 ```
-
-
 
 ## Development server
 
