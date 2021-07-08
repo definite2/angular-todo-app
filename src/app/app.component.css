@@ -3,7 +3,7 @@ mat-toolbar {
   background-color: rgb(13 46 66 / 50%);
   border-top: 1px solid rgb(10 69 109);
   border-bottom: 1px solid rgb(10 69 109);
-  color:var(--text-neon-blue);
+  color: var(--text-neon-blue);
 }
 #todo,
 #done {
@@ -42,8 +42,8 @@ mat-toolbar > span {
   width: 200px;
   height: 52px;
   letter-spacing: 1px;
-  display: 'inline-block';
-  outline: 'none';
+  display: "inline-block";
+  outline: "none";
   border: 1px solid #06d8d7;
   margin: 0;
   padding: 8px 16px;
@@ -54,14 +54,13 @@ mat-toolbar > span {
   background-color: #001a1a;
   transition: color 150ms ease-out;
   transform: box-shadow 150ms linear;
- 
 }
-.btn-add:hover{
+.btn-add:hover {
   color: #d4f6fd;
   box-shadow: 0 0.5em 0.5em -0.4em var(--text-neon-blue);
 }
 .title {
-  color:var(--text-neon-blue);
+  color: var(--text-neon-blue);
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -74,6 +73,15 @@ mat-toolbar > span {
 .msg-success {
   background-color: green;
 }
-.spacer{
+.spacer {
   flex: 1 1 auto;
+}
+@media screen and (max-width: 500px) {
+  button.btn-add {
+    width: 30px !important;
+    height: 42px;
+    font-size: 12;
+    overflow: hidden;
+    padding: 0 0 0 8px;
+  }
 }
