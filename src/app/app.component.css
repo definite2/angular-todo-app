@@ -63,10 +63,11 @@ mat-toolbar > span {
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: color 150ms ease-out;
+  text-shadow: 0 0 20px #09f;
+  cursor: default;
+  user-select: none;
 }
-.title:hover{
-  color: #d4f6fd;
-}
+
 .msg-success {
   background-color: green;
 }
