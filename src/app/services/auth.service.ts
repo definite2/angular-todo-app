@@ -30,6 +30,9 @@ export class AuthService {
   signInWithGithub(): Promise<any> {
     return this.signIn(new firebase.auth.GithubAuthProvider());
   }
+  private postSignIn(): void {
+    this.router.navigate(['/tasks']);
+  };
   signOut() {
     this.fireAuth.signOut().then((_) => this.router.navigate(['/']));
   }

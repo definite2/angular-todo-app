@@ -1,0 +1,14 @@
+.wrapper{
+  display: flex;
+  justify-content: center;
+}
+mat-card{
+  background-color: rgb(11 11 12);
+  color: #7efcf6;
+  margin-bottom: 10px;
+  max-height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 150ms ease-out;
+  border: 1px solid #06d8d7;
+}
