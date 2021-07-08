@@ -34,6 +34,8 @@ export class AuthService {
     this.router.navigate(['/tasks']);
   };
   signOut() {
-    this.fireAuth.signOut().then((_) => this.router.navigate(['/']));
+    this.fireAuth.signOut().then((_) => this.router.navigate(['/'])).catch((error) => {
+     console.log("signout error",error)
+    });;
   }
 }

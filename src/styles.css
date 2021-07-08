@@ -23,6 +23,7 @@ body {
   height: 100vh;
   font-family: "Saira", sans-serif;
   font-weight: 700;
+  background: url("./assets/bg-stars-2560.jpg") center bottom no-repeat;
 }
 .mat-dialog-container {
   background-color: #001a1a;
