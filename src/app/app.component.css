@@ -53,9 +53,12 @@ mat-toolbar > span {
   color: #7efcf6;
   background-color: #001a1a;
   transition: color 150ms ease-out;
+  transform: box-shadow 150ms linear;
+ 
 }
 .btn-add:hover{
   color: #d4f6fd;
+  box-shadow: 0 0.5em 0.5em -0.4em var(--text-neon-blue);
 }
 .title {
   color:var(--text-neon-blue);

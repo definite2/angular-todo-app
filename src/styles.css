@@ -48,11 +48,14 @@ body {
   background-color: #001a1a;
   transition: color 150ms ease-out;
 }
-.mat-raised-button:hover {
+.mat-raised-button:hover,
+.mat-raised-button:focus {
   color: #d4f6fd;
+
+  box-shadow: 0 0.5em 0.5em -0.4em var(--text-neon-blue);
+  transform: translateY(-0.25em);
 }
 .mat-form-field-label {
-  
 }
 .mat-checkbox-inner-container {
   background-color: rgb(13 46 66 / 50%);
@@ -68,24 +71,21 @@ body {
   .mat-checkbox-background {
   background-color: #001a1a;
 }
-label{
+label {
   color: #7efcf6 !important;
-  letter-spacing: .75px;
+  letter-spacing: 0.75px;
 }
-/* Border */
-.mat-form-field-appearance-outline .mat-form-field-outline {
-  color: white;
-}
+
 .mat-input-element {
   caret-color: var(--text-neon-blue);
 }
 .mat-form-field-underline {
   /*change color of underline*/
   background-color: var(--text-neon-blue) !important;
-} 
-.mat-form-field-ripple{
+}
+.mat-form-field-ripple {
   background-color: var(--text-neon-blue);
 }
-.mat-form-field.mat-focused .mat-form-field-ripple{
+.mat-form-field.mat-focused .mat-form-field-ripple {
   background-color: var(--text-neon-blue) !important;
 }

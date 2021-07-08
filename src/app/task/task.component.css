@@ -35,6 +35,7 @@ mat-card:hover {
   color: #d4f6fd;
   border: 1px solid #06d8d7;
   left: 0.1em;
+  box-shadow: 0.5em 0.5em 0.5em -0.4em var(--text-neon-blue);
  
 }
 mat-card .selected {
