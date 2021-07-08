@@ -102,7 +102,7 @@ export class AppComponent {
           this.store.collection('done').add(task)
           this.msgService.add(`${task.title} task is done`);
           this.snack.open(`${task.title} task is done`, '',
-          { duration: 2000})
+          { duration: 2000,panelClass:'msg-success'})
           // .onAction()
           // .pipe(take(1))
           // .subscribe(() => this.toggleStatus({ }));

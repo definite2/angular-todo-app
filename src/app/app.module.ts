@@ -21,12 +21,14 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { SnackbarComponent } from './snackbar/snackbar.component';
 @NgModule({
   declarations: [
     AppComponent,
     TaskComponent,
     TaskDialogComponent,
-    MessagesComponent
+    MessagesComponent,
+    SnackbarComponent
   ],
   imports: [
     BrowserModule,

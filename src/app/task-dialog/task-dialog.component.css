@@ -1,7 +1,10 @@
 mat-form-field {
     width: 98%;
+    color: #7efcf6; 
 }
-#deleteRaised{
-    float: right;
-    margin-left: 82px;
+.mat-input-element{
+    letter-spacing: 1px;
+}
+.mat-dialog-actions{
+    justify-content: flex-end;
 }

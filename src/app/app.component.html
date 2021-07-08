@@ -1,4 +1,4 @@
-<mat-toolbar>
+<mat-toolbar >
   <mat-icon>done_outline</mat-icon>
   <span>Drag N Drop Todo App</span>
 </mat-toolbar>
@@ -10,7 +10,7 @@
   <div class="container-wrapper">
     <div fxLayout.xs="column" fxLayout="row wrap"  fxLayoutAlign="center" fxLayoutGap="64px" ngClass.gt-xs="ml-10" >
     <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" id="todoContainer">
-      <h2>Todo</h2>
+      <h2 class="title">Todo</h2>
       
       <mat-card class="mat-elevation-z4" cdkDropList id="todo" #todoList="cdkDropList" [cdkDropListData]="todo | async"
         [cdkDropListConnectedTo]="[doneList]" (cdkDropListDropped)="drop($event)" class="list">
@@ -21,7 +21,7 @@
     </div>
     
     <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" id="compeletedContainer">
-      <h2>Completed</h2>
+      <h2 class="title">Completed</h2>
       <mat-card class="mat-elevation-z4" cdkDropList id="done" #doneList="cdkDropList" [cdkDropListData]="done | async"
         [cdkDropListConnectedTo]="[todoList]" (cdkDropListDropped)="drop($event)" class="list">
         <p class="empty-label" *ngIf="(done | async)?.length === 0">Empty list</p>

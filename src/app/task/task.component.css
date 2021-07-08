@@ -3,13 +3,14 @@
   margin-bottom: 10px;
   cursor: pointer;
 }
-.task {
-  background-color: var(--bg-dark);
-  color: var(--text-dark);
+mat-card {
+  background-color: rgb(11 11 12);
+  color: #7efcf6;
   margin-bottom: 10px;
   max-height: 80px;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: color 150ms ease-out;
 }
 
 .task-done {
@@ -32,12 +33,12 @@
   cursor: default;
 }
 mat-card:hover {
-  color: white;
-  background-color: rgb(91 146 255);;
+  color: #d4f6fd;
+  border: 1px solid #06d8d7;
   left: 0.1em;
 }
 mat-card .selected {
-  background-color: rgb(91 146 255);;
+  background-color: rgb(70 63 81);
   color: white;
 }
 .btn-edit{

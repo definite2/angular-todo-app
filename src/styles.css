@@ -1,31 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Saira:700");
+@import url("https://fonts.googleapis.com/css?family=Courgette&display=swap");
 :root {
   --bg-dark: rgb(48 50 61);
   --bg-light: hsl(0, 0%, 95%);
-  --text-dark: rgb(91 146 255);
+  --text-neon-blue: rgb(0 231 255);
   --bg-btn: rgb(91 146 255);
-  --white: hsl(0, 0%, 95%);
 }
 html,
 body {
-  height: 100%;
-}
-body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: var(--bg-dark);
+  background: #000;
+  height: 100vh;
+  font-family: "Saira", sans-serif;
+  font-weight: 700;
 }
 .mat-dialog-container {
-  background-color: var(--bg-dark);
-  color: var(--text-dark);
+  background-color: #001a1a;
+  color: #7efcf6;
 }
-.mat-raised-button {
-  background-color: var(--bg-btn);
-  color: var(--white);
+
+.mat-form-field-underline {
+  background-color: var(--text-dark);
 }
-.mat-form-field-underline{
-background-color: var(--text-dark);
+.mat-form-field-label {
 }
-.mat-form-field-label{
-  color:var(--text-dark)
+.mat-raised-button{
+  letter-spacing: 1px;
+  display: 'inline-block';
+  outline: 'none';
+  border: 1px solid #06d8d7 !important;
+  margin: 0;
+  padding: 8px 16px;
+  user-select: none;
+  vertical-align: middle;
+  font-size: 14;
+  color: #7efcf6;
+  background-color: #001a1a;
+  transition: color 150ms ease-out;
+}
+.mat-raised-button:hover{
+  color: #d4f6fd;
 }

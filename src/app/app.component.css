@@ -1,11 +1,13 @@
 mat-toolbar {
   margin-bottom: 20px;
-  background-color: var(--bg-btn);
+  background-color: rgb(13 46 66 / 50%);
+  border-top: 1px solid rgb(10 69 109);
+  border-bottom: 1px solid rgb(10 69 109);
+  color:var(--text-neon-blue);
 }
 #todo,
 #done {
-  border-color: var(--text-dark);
-  color: var(--text-dark);
+  background-color: rgb(13 46 66 / 50%);
   width: 375px;
 }
 
@@ -39,4 +41,32 @@ mat-toolbar > span {
 .btn-add {
   width: 200px;
   height: 52px;
+  letter-spacing: 1px;
+  display: 'inline-block';
+  outline: 'none';
+  border: 1px solid #06d8d7;
+  margin: 0;
+  padding: 8px 16px;
+  user-select: none;
+  vertical-align: middle;
+  font-size: 14;
+  color: #7efcf6;
+  background-color: #001a1a;
+  transition: color 150ms ease-out;
+}
+.btn-add:hover{
+  color: #d4f6fd;
+}
+.title {
+  color:var(--text-neon-blue);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 150ms ease-out;
+}
+.title:hover{
+  color: #d4f6fd;
+}
+.msg-success {
+  background-color: green;
 }
