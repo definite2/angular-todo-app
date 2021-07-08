@@ -6,7 +6,7 @@ Draggable Kanban task app
 
 <figure>
 <figcaption>Mobile</figcaption>
-<img src="./src/assets/screenshots/mobile.png" alt="mobile ss" height="500"/>
+<img src="./src/assets/screenshots/mobile-2.png" alt="mobile ss" height="500"/>
 </figure>
 
 <figure>
