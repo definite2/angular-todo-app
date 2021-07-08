@@ -13,6 +13,10 @@ Draggable Kanban task app
 <figcaption>Desktop</figcaption>
 <img src="./src/assets/screenshots/desktop.png" alt="desktop ss" />
 </figure>
+<figure>
+<figcaption>Dialog Active States</figcaption>
+<img src="./src/assets/screenshots/dialog-active-states.png" alt="desktop ss" />
+</figure>
 Stack
 -----
 - Angular CLI 11.0.4.

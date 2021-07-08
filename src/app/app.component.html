@@ -1,13 +1,12 @@
-<mat-toolbar style="padding-right: 60px;">
+<mat-toolbar style="padding-right: 60px">
   <mat-icon>done_outline</mat-icon>
   <span>Drag N Drop Todo App</span>
   <span class="spacer"></span>
-  <div *ngIf="auth.authenticated$ | async " class="right-logout">
-  
-   <button  mat-icon-button aria-label="logout-icon" (click)="auth.signOut()">
-    LOGOUT<mat-icon>logout</mat-icon>
-  </button>
-</div>
+  <div *ngIf="auth.authenticated$ | async" class="right-logout">
+    <button mat-icon-button aria-label="logout-icon" (click)="auth.signOut()">
+      LOGOUT<mat-icon>logout</mat-icon>
+    </button>
+  </div>
 </mat-toolbar>
 <div
   *ngIf="auth.authenticated$ | async; else elseBlock"
@@ -81,14 +80,13 @@
           ></app-task>
         </mat-card>
       </div>
-      <!-- end::flexbox -->
     </div>
   </div>
-  <!-- end::container wrapper -->
 </div>
 <ng-template #elseBlock>
   <app-login></app-login>
-</ng-template>   
+</ng-template>
+
 
 <!-- end::content-wrapper -->
 <router-outlet></router-outlet>
